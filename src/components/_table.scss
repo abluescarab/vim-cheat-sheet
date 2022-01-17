@@ -1,32 +1,22 @@
 table {
-    font-size: 8pt;
     width: 100%;
     border-collapse: collapse;
-
-    :nth-child(odd) {
-        font-family: "Courier New", monospace;
-    }
-
-    .align-right {
-        text-align: right;
-    }
 
     td, th {
         padding: 0;
         margin: 0;
+        height: 0.15in;
     }
 
     th {
-        text-align: left;
-        font-size: 8pt;
-
         &.title, &.subtitle {
             color: #0099FF;
         }
+    }
 
-        &.title {
-            font-size: 12pt;
-        }
+    p {
+        margin: 0;
+        padding: 0;
     }
 }
 

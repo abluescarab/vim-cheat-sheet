@@ -1,7 +1,27 @@
+.page-break {
+  page-break-before: always;
+}
+
 @media print {
   @page {
     size: landscape;
     margin: 0.5in;
+  }
+  body {
+    overflow: visible;
+  }
+  tr {
+    page-break-inside: avoid;
+  }
+}
+
+@media screen {
+  body {
+    margin: 20px;
+  }
+  table {
+    max-width: 11in;
+    margin: 0 auto;
   }
 }
 
@@ -11,21 +31,10 @@
 
 table {
   font-size: 8pt;
-  width: 100%;
-  border-collapse: collapse;
 }
 
-table :nth-child(odd) {
+table td:nth-child(odd):not(.sans-serif), table .monospace {
   font-family: "Courier New", monospace;
-}
-
-table .align-right {
-  text-align: right;
-}
-
-table td, table th {
-  padding: 0;
-  margin: 0;
 }
 
 table th {
@@ -33,10 +42,30 @@ table th {
   font-size: 8pt;
 }
 
+table th.title {
+  font-size: 12pt;
+}
+
+.align-right {
+  text-align: right;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td, table th {
+  padding: 0;
+  margin: 0;
+  height: 0.15in;
+}
+
 table th.title, table th.subtitle {
   color: #0099FF;
 }
 
-table th.title {
-  font-size: 12pt;
+table p {
+  margin: 0;
+  padding: 0;
 }

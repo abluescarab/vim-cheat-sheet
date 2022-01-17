@@ -1,6 +1,29 @@
+.page-break {
+    page-break-before: always;
+}
+
 @media print {
     @page {
         size: landscape;
         margin: 0.5in;
+    }
+
+    body {
+        overflow: visible;
+    }
+
+    tr {
+        page-break-inside: avoid;
+    }
+}
+
+@media screen {
+    body {
+        margin: 20px;
+    }
+
+    table {
+        max-width: 11in;
+        margin: 0 auto;
     }
 }

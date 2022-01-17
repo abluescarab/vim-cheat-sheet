@@ -10,36 +10,533 @@
 <body>
     <table>
         <tr>
-            <th class="title" colspan=4>vim cheat sheet</th>
-            <th class="subtitle align-right" colspan=4>Alana Gilston edited from Allison McKnight</th>
+            <th colspan=11 class="title">vim cheat sheet</th>
+            <th colspan=5 class="subtitle align-right">Alana Gilston edited from Allison McKnight</th>
         </tr>
         <tr>
-            <th colspan=4>Navigation</th>
-            <th colspan=2>Mode switching</th>
+            <th colspan=11>Navigation</th>
+            <th colspan=5>Mode switching</th>
         </tr>
         <tr>
-            <td>h</td>
-            <td>Move left</td>
-            <td>H</td>
-            <td>Top line on screen</td>
-            <td>i</td>
-            <td>Enter insert mode</td>
+            <td width=34>h</td>
+            <td colspan=6>Move left</td>
+            <td colspan=2>H</td>
+            <td colspan=2>Top line on screen</td>
+            <td width=62>i</td>
+            <td colspan=4>Enter insert mode</td>
         </tr>
         <tr>
-            <td>j</td>
-            <td>Move down</td>
-            <td>M</td>
-            <td>Middle line on screen</td>
-            <td>:</td>
-            <td>Enter command mode</td>
+            <td width=34>j</td>
+            <td colspan=6>Move down</td>
+            <td colspan=2>M</td>
+            <td colspan=2>Middle line on screen</td>
+            <td width=62>:</td>
+            <td colspan=4>Enter command mode</td>
         </tr>
         <tr>
-            <td>k</td>
-            <td>Move up</td>
-            <td>L</td>
-            <td>Bottom line on screen</td>
-            <td>R</td>
-            <td>Enter replace mode</td>
+            <td width=34>k</td>
+            <td colspan=6>Move up</td>
+            <td colspan=2>L</td>
+            <td colspan=2>Bottom line on screen</td>
+            <td width=62>R</td>
+            <td colspan=4>Enter replace mode</td>
+        </tr>
+        <tr>
+            <td width=34>l</td>
+            <td colspan=6>Move right</td>
+            <td colspan=2>&nbsp;</td>
+            <td colspan=2>&nbsp;</td>
+            <td width=62>v</td>
+            <td colspan=4>Enter visual mode (highlighting)</td>
+        </tr>
+        <tr>
+            <td width=34>10j</td>
+            <td colspan=6>Move down 10 lines</td>
+            <td colspan=2>&nbsp;</td>
+            <td colspan=2>&nbsp;</td>
+            <td width=62>V</td>
+            <td colspan=4>Enter visual line mode (highlighting lines)</td>
+        </tr>
+        <tr>
+            <td colspan=11>&nbsp;</td>
+            <td class="monospace">esc</td>
+            <td colspan=4 class="sans-serif">Return to normal mode from insert or replace mode</td>
+        </tr>
+        <tr>
+            <td width=34>gg</td>
+            <td colspan=6>First line of the file</td>
+            <td colspan=2>e</td>
+            <td colspan=2>The end of the current word</td>
+            <td width=62>esc+esc</td>
+            <td colspan=4>Return to normal mode from command or visual mode</td>
+        </tr>
+        <tr>
+            <td width=34>G</td>
+            <td colspan=6>Last line of the file</td>
+            <td colspan=2>b</td>
+            <td colspan=2>Beginning of current word</td>
+            <td width=62>Ctrl+w</td>
+            <td colspan=4>Viewport (split) mode</td>
+        </tr>
+        <tr>
+            <td width=34>:20</td>
+            <td colspan=6>Line 20 of the file</td>
+            <td colspan=2>W</td>
+            <td colspan=2>Beginning of next word</td>
+            <td colspan=5>&nbsp;</td>
+        </tr>
+        <tr>
+            <td width=34>20G</td>
+            <td colspan=6>Line 20 of the file</td>
+            <td colspan=2>20|</td>
+            <td colspan=2>Column 20 of the current line</td>
+            <th colspan=5>Copy/pasting</th>
+        </tr>
+        <tr>
+            <td colspan=11>&nbsp;</td>
+            <th colspan=5>Within vim</th>
+        </tr>
+        <tr>
+            <td width=34>gt</td>
+            <td colspan=6>Go to next tab</td>
+            <td colspan=2>gT</td>
+            <td colspan=2>Go to previous tab</td>
+            <td width=62>y</td>
+            <td colspan=4>Yank</td>
+        </tr>
+        <tr>
+            <td width=34>3gt</td>
+            <td colspan=6>Jump to the third tab</td>
+            <td colspan=2>hjkl</td>
+            <td colspan=2>Move cursor between viewports (splits) in viewport mode</td>
+            <td width=62>c</td>
+            <td colspan=4>"Change"; cut and enter insert mode</td>
+        </tr>
+        <tr>
+            <td colspan=11>&nbsp;</td>
+            <td class="monospace">C</td>
+            <td colspan=4 class="sans-serif">Change the rest of the current line</td>
+        </tr>
+        <tr>
+            <td width=34>0</td>
+            <td colspan=10>Beginning of current line</td>
+            <td width=62>d</td>
+            <td colspan=4>Delete; cut but remain in normal mode</td>
+        </tr>
+        <tr>
+            <td width=34>^</td>
+            <td colspan=10>First non-whitespace character of current line</td>
+            <td width=62>D</td>
+            <td colspan=4>Delete the rest of the current line after cursor</td>
+        </tr>
+        <tr>
+            <td width=34>$</td>
+            <td colspan=10>End of current line</td>
+            <td width=62>dd</td>
+            <td colspan=4>Delete the whole line</td>
+        </tr>
+        <tr>
+            <td width=34>%</td>
+            <td colspan=10>Move to matching parenthesis, bracket or brace</td>
+            <td width=62>P</td>
+            <td colspan=4>Paste after the cursor</td>
+        </tr>
+        <tr>
+            <td colspan=11 rowspan=2 class="sans-serif">The left, right, up, and down arrow keys can also be used to
+                navigate in some installations.</td>
+            <td class="monospace">P</td>
+            <td colspan=4 class="sans-serif">Paste before the cursor</td>
+        </tr>
+        <tr>
+            <td width=62>x</td>
+            <td colspan=4>Delete characters after the cursor</td>
+        </tr>
+        <tr>
+            <th colspan=11>Editing</th>
+            <td class="monospace">X</td>
+            <td colspan=4 class="sans-serif">Delete characters before the cursor</td>
+        </tr>
+        <tr>
+            <td colspan=1>i</td>
+            <td colspan=10>Insert before current character</td>
+            <td colspan=5 rowspan=2 class="sans-serif">Copy/paste commands operate on the specified range. If in
+                visual
+                mode, that range is the highlighted text. If in normal mode, that range is specified by a series of
+                modifiers
+                to the commands:</td>
+        </tr>
+        <tr>
+            <td colspan=1>a</td>
+            <td colspan=10>Insert after current character</td>
+        </tr>
+        <tr>
+            <td colspan=1>I</td>
+            <td colspan=10>Insert at the first non-whitespace character of the line</td>
+            <td width=62>cw</td>
+            <td colspan=4>Change one word</td>
+        </tr>
+        <tr>
+            <td colspan=1>A</td>
+            <td colspan=10>Insert after the last non-whitespace character of the line</td>
+            <td width=62>c4w</td>
+            <td colspan=4>Change four words</td>
+        </tr>
+        <tr>
+            <td colspan=1>o</td>
+            <td colspan=10>Insert a line below the current line, then enter insert mode</td>
+            <td width=62>c4l</td>
+            <td colspan=4>Change four letters</td>
+        </tr>
+        <tr>
+            <td colspan=1>O</td>
+            <td colspan=10>Insert a line above the current line, then enter insert mode</td>
+            <td width=62>cc</td>
+            <td colspan=4>Change current line</td>
+        </tr>
+        <tr>
+            <td colspan=1>r</td>
+            <td colspan=10>Overwrite one character and return to command mode</td>
+            <td width=62>4x</td>
+            <td colspan=4>Change four characters after the cursor</td>
+        </tr>
+        <tr>
+            <td colspan=1>U</td>
+            <td colspan=10>Undo</td>
+            <td width=62>4p</td>
+            <td colspan=4>Paste five times after the cursor</td>
+        </tr>
+        <tr>
+            <td colspan=1>Ctrl+R</td>
+            <td colspan=10>Redo</td>
+            <td colspan=5>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=1>.</td>
+            <td colspan=10>Repeat last insert mode action at the current location</td>
+            <td colspan=5 class="sans-serif">Modifiers work similarly for cut, delete, yank, and paste.</td>
+        </tr>
+        <tr>
+            <td colspan=1>=G</td>
+            <td colspan=10>Reindent block</td>
+            <td colspan=5>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=1>gg=G</td>
+            <td colspan=10>Reindent the whole file</td>
+            <th colspan=5>From system clipboard</th>
+        </tr>
+        <tr>
+            <td colspan=11>&nbsp;</td>
+            <td colspan=3 class="monospace">:set paste</td>
+            <td colspan=2 class="sans-serif">Enter paste mode</td>
+        </tr>
+        <tr>
+            <th colspan=11>Opening, closing, and saving files</th>
+            <td colspan=3 class="monospace">:set nopaste</td>
+            <td colspan=2 class="sans-serif">Exit paste mode</td>
+        </tr>
+        <tr>
+            <td colspan=6>:w</td>
+            <td colspan=5>Save the current file</td>
+            <td colspan=3>Ctrl+Shift+V</td>
+            <td colspan=2>Paste into file, if in paste mode; Command+Shift+V for Mac</td>
+        </tr>
+        <tr>
+            <td colspan=6>:wq</td>
+            <td colspan=5>Save the current file and close it; exits vim if no open files remain</td>
+            <td colspan=5>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=6>:w newname</td>
+            <td colspan=5>Save copy of current file as "newname", but continue editing the original file</td>
+            <td colspan=5>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=6>:sav newname</td>
+            <td colspan=5>Save copy of current file as "newname" and continue editing file "newname"</td>
+            <td colspan=3>&nbsp;</td>
+            <td colspan=2>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=6>:q!</td>
+            <td colspan=5>Close a file without saving</td>
+            <td colspan=3>&nbsp;</td>
+            <td colspan=2>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=6>:e somefile</td>
+            <td colspan=5>Opens file in the current buffer</td>
+            <td colspan=3>&nbsp;</td>
+            <td colspan=2>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=6>:x</td>
+            <td colspan=5>Write any changes to the file and close the file</td>
+            <td colspan=3>&nbsp;</td>
+            <td colspan=2>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=6>:vert</td>
+            <td colspan=5>Open any new window or file in a vertical split</td>
+            <td colspan=3>&nbsp;</td>
+            <td colspan=2>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=6>:term</td>
+            <td colspan=5>Open a terminal window in a new horizontal split</td>
+            <td colspan=3>&nbsp;</td>
+            <td colspan=2>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <div></div>
+                <div class="page-break"></div>
+            </td>
+        </tr>
+        <tr>
+            <th colspan=10>Tabs</th>
+            <th colspan=6>Viewports/splits</th>
+        </tr>
+        <tr>
+            <td colspan=5>:sp somefile</td>
+            <td colspan=5>Open a horizontal split window with a file</td>
+            <td colspan=5>:tabe somefile</td>
+            <td width=360>Open a file in a new tab</td>
+        </tr>
+        <tr>
+            <td colspan=5>:vsp somefile</td>
+            <td colspan=5>Open a vertical split window with a file</td>
+            <td colspan=5>:tabc</td>
+            <td width=360>Close a tab</td>
+        </tr>
+        <tr>
+            <td colspan=10 rowspan=3 class="sans-serif">Viewport commands will only work in viewport (split) mode
+                with at
+                least two viewports open. Enter the
+                viewport command keybind (<span class="monospace">Ctrl+w</span>) between
+                each of the below commands.</td>
+            <td colspan=5 class="monospace">:tabc index</td>
+            <td class="sans-serif">Close the tab at index, starting with 1</td>
+        </tr>
+        <tr>
+            <td colspan=5>:tabo</td>
+            <td width=360>Close all other tabs except current</td>
+        </tr>
+        <tr>
+            <td colspan=5>:tabs</td>
+            <td width=360>List all open tabs</td>
+        </tr>
+        <tr>
+            <td colspan=1>=</td>
+            <td colspan=9>Make all viewports the same size</td>
+            <td colspan=5>:tabm 0</td>
+            <td width=360>Move current tab to first index</td>
+        </tr>
+        <tr>
+            <td colspan=1 rowspan=2>-</td>
+            <td colspan=9 rowspan=2>Decrease the current viewport by a single row or column, determined by whether
+                the
+                viewport is split vertically or horizontally</td>
+            <td colspan=5>:tabm</td>
+            <td width=360>Move current tab to last index</td>
+        </tr>
+        <tr>
+            <td colspan=5>:tabm index</td>
+            <td width=360>Move current tab to index, starting with 0</td>
+        </tr>
+        <tr>
+            <td colspan=1 rowspan=2>+</td>
+            <td colspan=9 rowspan=2>Increase the current viewport by a single row or column, determined by whether
+                the
+                viewport is split vertically or horizontally</td>
+            <td colspan=5>:tabn</td>
+            <td width=360>Go to next tab</td>
+        </tr>
+        <tr>
+            <td colspan=5>:tabp</td>
+            <td width=360>Go to previous tab</td>
+        </tr>
+        <tr>
+            <td colspan=1 rowspan=2>10-</td>
+            <td colspan=9 rowspan=2>Decrease the current viewport by 10 rows or columns, determined by whether the
+                viewport
+                is split vertically or horizontally</td>
+            <td colspan=5>:tabfirst</td>
+            <td width=360>Go to first tab</td>
+        </tr>
+        <tr>
+            <td colspan=5>:tablast</td>
+            <td width=360>Go to last tab</td>
+        </tr>
+        <tr>
+            <td colspan=1>_</td>
+            <td colspan=9>Increase a viewport to its maximum height</td>
+            <td colspan=6>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=1>|</td>
+            <td colspan=9>Increase a viewport to its maximum width</td>
+            <th colspan=6>Search</th>
+        </tr>
+        <tr>
+            <td colspan=1>q</td>
+            <td colspan=9>Close the active viewport</td>
+            <td colspan=3>#</td>
+            <td colspan=3>Find the previous instance of the current word</td>
+        </tr>
+        <tr>
+            <td colspan=1>r</td>
+            <td colspan=9>Rotate viewport to the right</td>
+            <td colspan=3 rowspan=2>n</td>
+            <td colspan=3 rowspan=2>Find the next instance of the word being searched for, in the direction
+                specified by the
+                last use of {*,#}</td>
+        </tr>
+        <tr>
+            <td colspan=1>R</td>
+            <td colspan=9>Rotate viewport to the left</td>
+        </tr>
+        <tr>
+            <td colspan=10>&nbsp;</td>
+            <td colspan=3 rowspan=2 class="monospace">N</td>
+            <td colspan=3 rowspan=2 class="sans-serif">Find the previous instance of the word being searched for, in
+                the
+                direction specified by the last use of {*,#}</td>
+        </tr>
+        <tr>
+            <th colspan=10>Replace</th>
+        </tr>
+        <tr>
+            <td colspan=7>:s/foo/bar</td>
+            <td colspan=3>Replace the first occurrence of <span class="monospace">foo</span> on the current line
+                with bar
+            </td>
+            <td colspan=3>/word</td>
+            <td colspan=3>Find the next occurrence of "word"</td>
+        </tr>
+        <tr>
+            <td colspan=7>:[range]s/foo/bar/[flags]</td>
+            <td colspan=3>Replace <span class="monospace">foo</span> with <span class="monospace">bar</span> in
+                <span class="monospace">range</span> according to <span class="monospace">flags</span></td>
+            <td colspan=3 rowspan=2>/word/c</td>
+            <td colspan=3 rowspan=2>Find the next occurrence of "word", ignoring case ("\c" can appear anywhere in
+                the
+                sequence being searched for</td>
+        </tr>
+        <tr>
+            <td colspan=10>&nbsp;</td>
+        </tr>
+        <tr>
+            <th colspan=10>Ranges</th>
+            <td colspan=3 rowspan=2 class="monospace">/\&lt;word\&gt;</td>
+            <td colspan=3 rowspan=2 class="sans-serif">Find the next occurrence of "word", where "word" is bounded
+                by word
+                boundaries (e.g. space, dash)</td>
+        </tr>
+        <tr>
+            <td colspan=1>%</td>
+            <td colspan=9>The entire file</td>
+        </tr>
+        <tr>
+            <td colspan=1>"&lt;,"&gt;</td>
+            <td colspan=9>The current selection; the default range while in visual mode</td>
+            <td colspan=3>:noh</td>
+            <td colspan=3>Un-highlight words</td>
+        </tr>
+        <tr>
+            <td colspan=1>25</td>
+            <td colspan=9>Line 25</td>
+            <td colspan=6>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=1>25,50</td>
+            <td colspan=9>Lines 25-50</td>
+            <th colspan=6>Handy Tricks</th>
+        </tr>
+        <tr>
+            <td colspan=1>$</td>
+            <td colspan=9>Last line; can be combined with other lines as in "50,$"</td>
+            <td colspan=3>-</td>
+            <td colspan=3>Toggle case of character beneath the cursor</td>
+        </tr>
+        <tr>
+            <td colspan=1>.</td>
+            <td colspan=9>Current line; can be combined with other lines as in ".,50"</td>
+            <td colspan=3>xp</td>
+            <td colspan=3>Transpose current character with that to its right</td>
+        </tr>
+        <tr>
+            <td colspan=1>,+2</td>
+            <td colspan=9>The current lines and the two lines below</td>
+            <td colspan=3>J</td>
+            <td colspan=3>Join the current line and the line beneath it</td>
+        </tr>
+        <tr>
+            <td colspan=1>-2,</td>
+            <td colspan=9>The current lines and the two lines above</td>
+            <td colspan=3>:Ni!</td>
+            <td colspan=3>Receive inquiry about shrubberies</td>
+        </tr>
+        <tr>
+            <td colspan=10>&nbsp;</td>
+            <td colspan=3 class="monospace">:help</td>
+            <td colspan=3 class="sans-serif">View vim help file</td>
+        </tr>
+        <tr>
+            <th colspan=10>Flags</th>
+            <td colspan=3 class="monospace">:help foo</td>
+            <td colspan=3 class="sans-serif">View vim help entry on "foo"</td>
+        </tr>
+        <tr>
+            <td colspan=1>g</td>
+            <td colspan=9>Replace all occurrences on the specified line(s)</td>
+            <td colspan=3>g Ctrl+g</td>
+            <td colspan=3>View line, word, and byte count of selection</td>
+        </tr>
+        <tr>
+            <td colspan=1>i</td>
+            <td colspan=9>Ignore case</td>
+            <td colspan=6>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=1>c</td>
+            <td colspan=9>Confirm each substition</td>
+            <th colspan=6>Resources</th>
+        </tr>
+        <tr>
+            <td colspan=10>&nbsp;</td>
+            <td colspan=6 rowspan=2>
+                <p class="monospace">http://www.arl.wustl.edu/~fredk/Courses/Docs/vim/</p>
+                <p>The vim manual, online.</p>
+            </td>
+        </tr>
+        <tr>
+            <th colspan=10>Regular expressions</th>
+        </tr>
+        <tr>
+            <td colspan=10 rowspan=3 class="sans-serif">
+                Both vim's find and replace functions accept regular expressions. By default, vim assumes
+                that some characters are part of a regular expression and these characters must be escaped
+                with "<span class="monospace">\</span>" to be searched for literally; these characters include <span
+                    class="monospace">(</span>, <span class="monospace">)</span>, <span class="monospace">*</span>,
+                <span class="monospace">.</span>, <span class="monospace">^</span>, <span
+                    class="monospace">$</span>. Other
+                regular expression patterns are interpreted literally by default and must be escaped to be used
+                as a part of a regular expression; these include <span class="monospace">+</span>.
+            </td>
+            <td colspan=6>
+                <p class="monospace">http://www.stackoverflow.com/</p>
+                <p>Good general-purpose programming questions site.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan=6 class="sans-serif">
+                <p class="monospace">http://vim.fandom.com/</p>
+                <p>A wiki dedicated to vim.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan=6>&nbsp;</td>
         </tr>
     </table>
 </body>
